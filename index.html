@@ -261,6 +261,16 @@
             min-height: 80px;
         }
 
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
         .form-buttons {
             display: flex;
             gap: 10px;
@@ -382,6 +392,7 @@
                 <div class="progress-dot active" id="dot1"></div>
                 <div class="progress-dot" id="dot2"></div>
                 <div class="progress-dot" id="dot3"></div>
+                <div class="progress-dot" id="dot4"></div>
             </div>
 
             <div id="question-container">
@@ -448,6 +459,13 @@
                             <textarea id="activity-description" required placeholder="Describe what the kids will do..."></textarea>
                         </div>
                         
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="activity-water">
+                                <label for="activity-water">This activity involves water</label>
+                            </div>
+                        </div>
+                        
                         <div class="form-buttons">
                             <button type="submit" class="add-btn">Add Activity</button>
                             <button type="button" class="back-btn" onclick="cancelEdit()">Cancel</button>
@@ -478,155 +496,155 @@
             inside: {
                 alone: {
                     quick: [
-                        { title: "Origami Animals", description: "Fold paper into cranes, frogs, or butterflies using simple origami techniques." },
-                        { title: "Drawing Challenge", description: "Draw your outdoor adventures or create a comic strip about your imaginary characters." },
-                        { title: "Magic Trick Practice", description: "Learn a simple card trick or coin trick from a book or video." },
-                        { title: "Build with Blocks", description: "Create a tower, castle, or spaceship using Lego or wooden blocks." },
-                        { title: "Puzzle Time", description: "Work on a jigsaw puzzle, crossword, or brain teaser game." },
-                        { title: "Doodle Art", description: "Create zentangle patterns or mandala designs in a sketchbook." },
-                        { title: "Sock Puppets", description: "Make puppets from old socks and put on a show for your toys." },
-                        { title: "Paper Crafts", description: "Make paper flowers, bookmarks, or greeting cards." },
-                        { title: "Indoor Scavenger Hunt", description: "Create a list of items to find around the house." },
-                        { title: "Memory Palace", description: "Practice memorising a deck of cards or a poem." },
-                        { title: "Coin Tricks", description: "Learn to make coins disappear and reappear." },
-                        { title: "Quick Sketch", description: "Draw everything you can see from one window in 15 minutes." },
-                        { title: "Word Games", description: "Play word association or create rhyming poems." },
-                        { title: "Balloon Games", description: "Keep a balloon in the air using only your feet." },
-                        { title: "Mini Meditation", description: "Practice breathing exercises and mindfulness for 10 minutes." }
+                        { title: "Origami Animals", description: "Fold paper into cranes, frogs, or butterflies using simple origami techniques.", waterActivity: false },
+                        { title: "Drawing Challenge", description: "Draw your outdoor adventures or create a comic strip about your imaginary characters.", waterActivity: false },
+                        { title: "Magic Trick Practice", description: "Learn a simple card trick or coin trick from a book or video.", waterActivity: false },
+                        { title: "Build with Blocks", description: "Create a tower, castle, or spaceship using Lego or wooden blocks.", waterActivity: false },
+                        { title: "Puzzle Time", description: "Work on a jigsaw puzzle, crossword, or brain teaser game.", waterActivity: false },
+                        { title: "Doodle Art", description: "Create zentangle patterns or mandala designs in a sketchbook.", waterActivity: false },
+                        { title: "Sock Puppets", description: "Make puppets from old socks and put on a show for your toys.", waterActivity: false },
+                        { title: "Paper Crafts", description: "Make paper flowers, bookmarks, or greeting cards.", waterActivity: false },
+                        { title: "Indoor Scavenger Hunt", description: "Create a list of items to find around the house.", waterActivity: false },
+                        { title: "Memory Palace", description: "Practice memorising a deck of cards or a poem.", waterActivity: false },
+                        { title: "Coin Tricks", description: "Learn to make coins disappear and reappear.", waterActivity: false },
+                        { title: "Quick Sketch", description: "Draw everything you can see from one window in 15 minutes.", waterActivity: false },
+                        { title: "Word Games", description: "Play word association or create rhyming poems.", waterActivity: false },
+                        { title: "Balloon Games", description: "Keep a balloon in the air using only your feet.", waterActivity: false },
+                        { title: "Mini Meditation", description: "Practice breathing exercises and mindfulness for 10 minutes.", waterActivity: false }
                     ],
                     long: [
-                        { title: "Write a Story", description: "Create an adventure story about exploring your property or meeting magical creatures." },
-                        { title: "Learn to Code", description: "Use Scratch Jr or similar apps to create simple games or animations." },
-                        { title: "Build a Model", description: "Follow instructions to build a model plane, car, or ship from a kit." },
-                        { title: "Create a Photo Album", description: "Organise photos from your outdoor adventures and write captions for each one." },
-                        { title: "Cookbook Creation", description: "Write and illustrate your own cookbook with favourite family recipes." },
-                        { title: "Learn an Instrument", description: "Practice playing guitar, piano, or any instrument for an hour." },
-                        { title: "Video Documentary", description: "Create a documentary about your pets, family, or hobbies." },
-                        { title: "Calligraphy Practice", description: "Learn beautiful handwriting styles and create decorative quotes." },
-                        { title: "Language Learning", description: "Use apps or books to learn basic phrases in a new language." },
-                        { title: "Science Experiments", description: "Conduct safe kitchen science experiments with household items." },
-                        { title: "Historical Research", description: "Research your family history or a historical period that interests you." },
-                        { title: "Art Masterpiece", description: "Create a detailed painting or drawing that takes several hours." },
-                        { title: "Comic Book Creation", description: "Write and illustrate your own comic book with multiple chapters." },
-                        { title: "Stop Motion Animation", description: "Create a detailed stop-motion video using toys or clay." },
-                        { title: "Design a Room", description: "Plan and sketch how you'd redesign your bedroom or a fantasy room." }
+                        { title: "Write a Story", description: "Create an adventure story about exploring your property or meeting magical creatures.", waterActivity: false },
+                        { title: "Learn to Code", description: "Use Scratch Jr or similar apps to create simple games or animations.", waterActivity: false },
+                        { title: "Build a Model", description: "Follow instructions to build a model plane, car, or ship from a kit.", waterActivity: false },
+                        { title: "Create a Photo Album", description: "Organise photos from your outdoor adventures and write captions for each one.", waterActivity: false },
+                        { title: "Cookbook Creation", description: "Write and illustrate your own cookbook with favourite family recipes.", waterActivity: false },
+                        { title: "Learn an Instrument", description: "Practice playing guitar, piano, or any instrument for an hour.", waterActivity: false },
+                        { title: "Video Documentary", description: "Create a documentary about your pets, family, or hobbies.", waterActivity: false },
+                        { title: "Calligraphy Practice", description: "Learn beautiful handwriting styles and create decorative quotes.", waterActivity: false },
+                        { title: "Language Learning", description: "Use apps or books to learn basic phrases in a new language.", waterActivity: false },
+                        { title: "Science Experiments", description: "Conduct safe kitchen science experiments with household items.", waterActivity: false },
+                        { title: "Historical Research", description: "Research your family history or a historical period that interests you.", waterActivity: false },
+                        { title: "Art Masterpiece", description: "Create a detailed painting or drawing that takes several hours.", waterActivity: false },
+                        { title: "Comic Book Creation", description: "Write and illustrate your own comic book with multiple chapters.", waterActivity: false },
+                        { title: "Stop Motion Animation", description: "Create a detailed stop-motion video using toys or clay.", waterActivity: false },
+                        { title: "Design a Room", description: "Plan and sketch how you'd redesign your bedroom or a fantasy room.", waterActivity: false }
                     ]
                 },
                 together: {
                     quick: [
-                        { title: "Paper Plane Competition", description: "Make different paper plane designs and see whose flies furthest or longest." },
-                        { title: "Indoor Bowling", description: "Set up plastic bottles in the hallway and take turns bowling with a soft ball." },
-                        { title: "Shadow Puppet Show", description: "Use a torch and white sheet to create shadow animals and tell stories." },
-                        { title: "Card House Building", description: "Work together to build the tallest card house without it falling down." },
-                        { title: "Charades Challenge", description: "Act out movies, books, or animals for each other to guess." },
-                        { title: "Dance Party", description: "Have a 20-minute dance competition with your favourite songs." },
-                        { title: "Story Chain", description: "Take turns adding one sentence to create a collaborative story." },
-                        { title: "Indoor Hopscotch", description: "Use tape to create a hopscotch court in the living room." },
-                        { title: "Riddle Contest", description: "Take turns asking each other riddles and brain teasers." },
-                        { title: "Balloon Volleyball", description: "Set up a net using string and play volleyball with a balloon." },
-                        { title: "Mirror Challenge", description: "Try to copy each other's movements like looking in a mirror." },
-                        { title: "Cooking Challenge", description: "Make sandwiches or snacks with unusual ingredient combinations." },
-                        { title: "Indoor Treasure Hunt", description: "Hide clues around the house for each other to find." },
-                        { title: "Fashion Show", description: "Create outfits from dress-up clothes and put on a runway show." },
-                        { title: "Talent Show", description: "Each person performs a special talent or skill for 5 minutes." }
+                        { title: "Paper Plane Competition", description: "Make different paper plane designs and see whose flies furthest or longest.", waterActivity: false },
+                        { title: "Indoor Bowling", description: "Set up plastic bottles in the hallway and take turns bowling with a soft ball.", waterActivity: false },
+                        { title: "Shadow Puppet Show", description: "Use a torch and white sheet to create shadow animals and tell stories.", waterActivity: false },
+                        { title: "Card House Building", description: "Work together to build the tallest card house without it falling down.", waterActivity: false },
+                        { title: "Charades Challenge", description: "Act out movies, books, or animals for each other to guess.", waterActivity: false },
+                        { title: "Dance Party", description: "Have a 20-minute dance competition with your favourite songs.", waterActivity: false },
+                        { title: "Story Chain", description: "Take turns adding one sentence to create a collaborative story.", waterActivity: false },
+                        { title: "Indoor Hopscotch", description: "Use tape to create a hopscotch court in the living room.", waterActivity: false },
+                        { title: "Riddle Contest", description: "Take turns asking each other riddles and brain teasers.", waterActivity: false },
+                        { title: "Balloon Volleyball", description: "Set up a net using string and play volleyball with a balloon.", waterActivity: false },
+                        { title: "Mirror Challenge", description: "Try to copy each other's movements like looking in a mirror.", waterActivity: false },
+                        { title: "Cooking Challenge", description: "Make sandwiches or snacks with unusual ingredient combinations.", waterActivity: false },
+                        { title: "Indoor Treasure Hunt", description: "Hide clues around the house for each other to find.", waterActivity: false },
+                        { title: "Fashion Show", description: "Create outfits from dress-up clothes and put on a runway show.", waterActivity: false },
+                        { title: "Talent Show", description: "Each person performs a special talent or skill for 5 minutes.", waterActivity: false }
                     ],
                     long: [
-                        { title: "Build a Blanket Fort", description: "Use furniture, blankets, and pillows to create an epic fort spanning multiple rooms." },
-                        { title: "Create Stop-Motion Video", description: "Use toys or drawings to make a short stop-motion movie with your phone or tablet." },
-                        { title: "Design a Board Game", description: "Create your own board game with cardboard, markers, and creative rules." },
-                        { title: "Build a Cardboard City", description: "Use boxes and cardboard to create an entire city with roads, buildings, and vehicles." },
-                        { title: "Family Podcast", description: "Record a podcast episode interviewing family members about their lives." },
-                        { title: "Theatre Production", description: "Write, rehearse, and perform a play with costumes and props." },
-                        { title: "Escape Room Design", description: "Create an escape room experience with puzzles and clues." },
-                        { title: "Time Capsule", description: "Create a family time capsule with current photos, letters, and predictions." },
-                        { title: "Indoor Olympics", description: "Set up multiple game stations and compete in various challenges." },
-                        { title: "Restaurant Role-Play", description: "Set up a restaurant with menus, take orders, and cook real food." },
-                        { title: "News Broadcast", description: "Create and film your own news show reporting on family events." },
-                        { title: "Band Formation", description: "Form a band using household items as instruments and write songs." },
-                        { title: "Science Fair Project", description: "Design and conduct a science experiment together." },
-                        { title: "Photography Studio", description: "Set up a photo studio and take professional-style portraits." },
-                        { title: "Museum Creation", description: "Create a museum exhibit about your family, interests, or collections." }
+                        { title: "Build a Blanket Fort", description: "Use furniture, blankets, and pillows to create an epic fort spanning multiple rooms.", waterActivity: false },
+                        { title: "Create Stop-Motion Video", description: "Use toys or drawings to make a short stop-motion movie with your phone or tablet.", waterActivity: false },
+                        { title: "Design a Board Game", description: "Create your own board game with cardboard, markers, and creative rules.", waterActivity: false },
+                        { title: "Build a Cardboard City", description: "Use boxes and cardboard to create an entire city with roads, buildings, and vehicles.", waterActivity: false },
+                        { title: "Family Podcast", description: "Record a podcast episode interviewing family members about their lives.", waterActivity: false },
+                        { title: "Theatre Production", description: "Write, rehearse, and perform a play with costumes and props.", waterActivity: false },
+                        { title: "Escape Room Design", description: "Create an escape room experience with puzzles and clues.", waterActivity: false },
+                        { title: "Time Capsule", description: "Create a family time capsule with current photos, letters, and predictions.", waterActivity: false },
+                        { title: "Indoor Olympics", description: "Set up multiple game stations and compete in various challenges.", waterActivity: false },
+                        { title: "Restaurant Role-Play", description: "Set up a restaurant with menus, take orders, and cook real food.", waterActivity: false },
+                        { title: "News Broadcast", description: "Create and film your own news show reporting on family events.", waterActivity: false },
+                        { title: "Band Formation", description: "Form a band using household items as instruments and write songs.", waterActivity: false },
+                        { title: "Science Fair Project", description: "Design and conduct a science experiment together.", waterActivity: false },
+                        { title: "Photography Studio", description: "Set up a photo studio and take professional-style portraits.", waterActivity: false },
+                        { title: "Museum Creation", description: "Create a museum exhibit about your family, interests, or collections.", waterActivity: false }
                     ]
                 }
             },
             outside: {
                 alone: {
                     quick: [
-                        { title: "Skip Stones", description: "Find flat stones and practice skipping them across the stream surface." },
-                        { title: "Nature Collection", description: "Collect different shaped leaves, smooth stones, or interesting bark pieces." },
-                        { title: "Tree Climbing Practice", description: "Choose a good climbing tree and practice getting higher safely." },
-                        { title: "Build a Rock Cairn", description: "Stack stones to create a balanced sculpture in different spots around your property." },
-                        { title: "Cloud Watching", description: "Lie on the grass and find shapes and animals in the cloud formations." },
-                        { title: "Bird Watching", description: "Use binoculars to spot and identify different bird species in your area." },
-                        { title: "Flower Pressing", description: "Collect flowers and leaves to press between heavy books." },
-                        { title: "Photography Walk", description: "Take photos of interesting textures, patterns, and colours in nature." },
-                        { title: "Geocaching", description: "Use a GPS app to find hidden caches around your neighbourhood." },
-                        { title: "Star Gazing", description: "Look for constellations and planets in the night sky." },
-                        { title: "Weather Tracking", description: "Record temperature, wind direction, and cloud types for a week." },
-                        { title: "Fossil Hunting", description: "Search for interesting rocks that might contain fossils or crystals." },
-                        { title: "Meditation Walk", description: "Take a slow, mindful walk focusing on sounds, smells, and sensations." },
-                        { title: "Seed Collection", description: "Gather seeds from different plants to start your own garden." },
-                        { title: "Football", description: "Set up some drills." },
-                        { title: "Sundial Creation", description: "Use a stick and stones to create a working sundial." }
+                        { title: "Skip Stones", description: "Find flat stones and practice skipping them across the stream surface.", waterActivity: true },
+                        { title: "Nature Collection", description: "Collect different shaped leaves, smooth stones, or interesting bark pieces.", waterActivity: false },
+                        { title: "Tree Climbing Practice", description: "Choose a good climbing tree and practice getting higher safely.", waterActivity: false },
+                        { title: "Build a Rock Cairn", description: "Stack stones to create a balanced sculpture in different spots around your property.", waterActivity: false },
+                        { title: "Cloud Watching", description: "Lie on the grass and find shapes and animals in the cloud formations.", waterActivity: false },
+                        { title: "Bird Watching", description: "Use binoculars to spot and identify different bird species in your area.", waterActivity: false },
+                        { title: "Flower Pressing", description: "Collect flowers and leaves to press between heavy books.", waterActivity: false },
+                        { title: "Photography Walk", description: "Take photos of interesting textures, patterns, and colours in nature.", waterActivity: false },
+                        { title: "Geocaching", description: "Use a GPS app to find hidden caches around your neighbourhood.", waterActivity: false },
+                        { title: "Star Gazing", description: "Look for constellations and planets in the night sky.", waterActivity: false },
+                        { title: "Weather Tracking", description: "Record temperature, wind direction, and cloud types for a week.", waterActivity: false },
+                        { title: "Fossil Hunting", description: "Search for interesting rocks that might contain fossils or crystals.", waterActivity: false },
+                        { title: "Meditation Walk", description: "Take a slow, mindful walk focusing on sounds, smells, and sensations.", waterActivity: false },
+                        { title: "Seed Collection", description: "Gather seeds from different plants to start your own garden.", waterActivity: false },
+                        { title: "Football", description: "Set up some drills.", waterActivity: false },
+                        { title: "Sundial Creation", description: "Use a stick and stones to create a working sundial.", waterActivity: false }
                     ],
                     long: [
-                        { title: "Create a Nature Journal", description: "Draw and write about the plants, animals, and weather you observe outside." },
-                        { title: "Build a Shelter", description: "Use branches, leaves, and natural materials to create a small shelter or hideout." },
-                        { title: "Make Natural Art", description: "Create pictures or patterns using stones, flowers, leaves, and other natural materials." },
-                        { title: "Practice Animal Tracking", description: "Look for animal footprints, droppings, and feeding signs around your property." },
-                        { title: "Garden Design", description: "Plan and create a small garden with flowers, herbs, or vegetables." },
-                        { title: "Wildlife Documentary", description: "Film and narrate the wildlife and plants around your property." },
-                        { title: "Survival Skills", description: "Practice making fire, finding water, and building shelter safely." },
-                        { title: "Nature Photography", description: "Spend hours photographing insects, plants, and landscapes in detail." },
-                        { title: "Weather Station", description: "Build instruments to measure rainfall, wind speed, and temperature." },
-                        { title: "Botanical Study", description: "Create a detailed guide to all the plants growing on your property." },
-                        { title: "Camping Setup", description: "Set up a tent and spend several hours camping in your garden." },
-                        { title: "Archaeology Dig", description: "Carefully excavate a small area to see what you can find buried." },
-                        { title: "Nature Conservation", description: "Create habitats for wildlife like bee hotels or bird feeding stations." },
-                        { title: "Orienteering Course", description: "Use a compass and map to navigate around your property and neighbourhood." },
-                        { title: "Football", description: "Set up some drills." },
-                        { title: "Water Quality Testing", description: "Test and document the quality of stream water using simple test kits." }
+                        { title: "Create a Nature Journal", description: "Draw and write about the plants, animals, and weather you observe outside.", waterActivity: false },
+                        { title: "Build a Shelter", description: "Use branches, leaves, and natural materials to create a small shelter or hideout.", waterActivity: false },
+                        { title: "Make Natural Art", description: "Create pictures or patterns using stones, flowers, leaves, and other natural materials.", waterActivity: false },
+                        { title: "Practice Animal Tracking", description: "Look for animal footprints, droppings, and feeding signs around your property.", waterActivity: false },
+                        { title: "Garden Design", description: "Plan and create a small garden with flowers, herbs, or vegetables.", waterActivity: false },
+                        { title: "Wildlife Documentary", description: "Film and narrate the wildlife and plants around your property.", waterActivity: false },
+                        { title: "Survival Skills", description: "Practice making fire, finding water, and building shelter safely.", waterActivity: false },
+                        { title: "Nature Photography", description: "Spend hours photographing insects, plants, and landscapes in detail.", waterActivity: false },
+                        { title: "Weather Station", description: "Build instruments to measure rainfall, wind speed, and temperature.", waterActivity: false },
+                        { title: "Botanical Study", description: "Create a detailed guide to all the plants growing on your property.", waterActivity: false },
+                        { title: "Camping Setup", description: "Set up a tent and spend several hours camping in your garden.", waterActivity: false },
+                        { title: "Archaeology Dig", description: "Carefully excavate a small area to see what you can find buried.", waterActivity: false },
+                        { title: "Nature Conservation", description: "Create habitats for wildlife like bee hotels or bird feeding stations.", waterActivity: false },
+                        { title: "Orienteering Course", description: "Use a compass and map to navigate around your property and neighbourhood.", waterActivity: false },
+                        { title: "Football", description: "Set up some drills.", waterActivity: false },
+                        { title: "Water Quality Testing", description: "Test and document the quality of stream water using simple test kits.", waterActivity: true }
                     ]
                 },
                 together: {
                     quick: [
-                        { title: "Stream Boat Race", description: "Make boats from bark, leaves, and twigs and race them down the stream." },
-                        { title: "Bug Hunting Expedition", description: "Use magnifying glasses to find and observe insects around your property." },
-                        { title: "Nature Hide and Seek", description: "Use trees, rocks, and bushes as hiding spots for an epic game of hide and seek." },
-                        { title: "Build a Stream Bridge", description: "Work together to build a bridge across a narrow part of the stream using logs and stones." },
-                        { title: "Outdoor Scavenger Hunt", description: "Create a list of natural items to find like red leaves, smooth rocks, or animal tracks." },
-                        { title: "Frisbee Fun", description: "Play various frisbee games like ultimate frisbee or frisbee golf." },
-                        { title: "Nature Sketching", description: "Sit together and draw the same landscape or tree from different angles." },
-                        { title: "Rock Skipping Contest", description: "Compete to see who can skip stones the most times across water." },
-                        { title: "Outdoor Sports", description: "Play catch, kick a ball, or practice juggling in the garden." },
-                        { title: "Bug Race Track", description: "Create race tracks in the dirt for beetles or other crawling insects." },
-                        { title: "Water Balloon Games", description: "Have water balloon tosses or create target practice games." },
-                        { title: "Picnic Setup", description: "Prepare and enjoy a picnic lunch in a scenic spot on your property." },
-                        { title: "Nature Bingo", description: "Create bingo cards with items to spot like different birds, insects, or plants." },
-                        { title: "Outdoor Art", description: "Use mud, water, and natural materials to paint on trees or rocks." },
-                        { title: "Biking, Scootering or Skateboarding", description: "Set up the jumps, and practice your tricks." },
-                        { title: "RC Cars", description: "Have an RC Car race, while they are charging, set up a race track." },
-                        { title: "Football", description: "Have a quick game or a few drills." },
-                        { title: "Animal Charades", description: "Act out different animals you might find in nature for others to guess." }
+                        { title: "Stream Boat Race", description: "Make boats from bark, leaves, and twigs and race them down the stream.", waterActivity: true },
+                        { title: "Bug Hunting Expedition", description: "Use magnifying glasses to find and observe insects around your property.", waterActivity: false },
+                        { title: "Nature Hide and Seek", description: "Use trees, rocks, and bushes as hiding spots for an epic game of hide and seek.", waterActivity: false },
+                        { title: "Build a Stream Bridge", description: "Work together to build a bridge across a narrow part of the stream using logs and stones.", waterActivity: true },
+                        { title: "Outdoor Scavenger Hunt", description: "Create a list of natural items to find like red leaves, smooth rocks, or animal tracks.", waterActivity: false },
+                        { title: "Frisbee Fun", description: "Play various frisbee games like ultimate frisbee or frisbee golf.", waterActivity: false },
+                        { title: "Nature Sketching", description: "Sit together and draw the same landscape or tree from different angles.", waterActivity: false },
+                        { title: "Rock Skipping Contest", description: "Compete to see who can skip stones the most times across water.", waterActivity: true },
+                        { title: "Outdoor Sports", description: "Play catch, kick a ball, or practice juggling in the garden.", waterActivity: false },
+                        { title: "Bug Race Track", description: "Create race tracks in the dirt for beetles or other crawling insects.", waterActivity: false },
+                        { title: "Water Balloon Games", description: "Have water balloon tosses or create target practice games.", waterActivity: true },
+                        { title: "Picnic Setup", description: "Prepare and enjoy a picnic lunch in a scenic spot on your property.", waterActivity: false },
+                        { title: "Nature Bingo", description: "Create bingo cards with items to spot like different birds, insects, or plants.", waterActivity: false },
+                        { title: "Outdoor Art", description: "Use mud, water, and natural materials to paint on trees or rocks.", waterActivity: false },
+                        { title: "Biking, Scootering or Skateboarding", description: "Set up the jumps, and practice your tricks.", waterActivity: false },
+                        { title: "RC Cars", description: "Have an RC Car race, while they are charging, set up a race track.", waterActivity: false },
+                        { title: "Football", description: "Have a quick game or a few drills.", waterActivity: false },
+                        { title: "Animal Charades", description: "Act out different animals you might find in nature for others to guess.", waterActivity: false }
                     ],
                     long: [
-                        { title: "Build a Stream Dam", description: "Use rocks, sticks, and mud to create a dam and small pond in your stream." },
-                        { title: "Create a Treasure Hunt", description: "Hide clues around trees, rocks, and landmarks for each other to solve." },
-                        { title: "Build a Tree Fort", description: "Work together to build a fort or platform in a sturdy tree using branches and rope." },
-                        { title: "Design an Obstacle Course", description: "Create a challenging course using fallen logs, rocks, and stream crossings." },
-                        { title: "Outdoor Theatre", description: "Write and perform plays using nature as your stage and backdrop." },
-                        { title: "Campfire Cooking", description: "Safely build a fire and cook meals or roast marshmallows together." },
-                        { title: "Stream Study", description: "Spend hours studying the ecosystem in and around your stream." },
-                        { title: "Adventure Course", description: "Design a multi-hour adventure with different challenges and activities." },
-                        { title: "Wildlife Research", description: "Conduct a detailed study of all the animals living on your property." },
-                        { title: "Outdoor Games Tournament", description: "Set up stations for different outdoor games and compete." },
-                        { title: "Nature Documentary", description: "Film a professional-style documentary about your outdoor environment." },
-                        { title: "Camping Adventure", description: "Set up tents and spend the day camping with outdoor cooking and activities." },
-                        { title: "Environmental Project", description: "Work together on a conservation project like cleaning up an area or planting trees." },
-                        { title: "Exploration Expedition", description: "Plan and execute a detailed exploration of new areas around your property." },
-                        { title: "Biking", description: "Go for a bike ride around the neighbourhood." },
-                        { title: "Football", description: "Have a friendly game of football." },
-                        { title: "Outdoor Science Lab", description: "Set up experiments to study soil, water, plants, and weather over several hours." }
+                        { title: "Build a Stream Dam", description: "Use rocks, sticks, and mud to create a dam and small pond in your stream.", waterActivity: true },
+                        { title: "Create a Treasure Hunt", description: "Hide clues around trees, rocks, and landmarks for each other to solve.", waterActivity: false },
+                        { title: "Build a Tree Fort", description: "Work together to build a fort or platform in a sturdy tree using branches and rope.", waterActivity: false },
+                        { title: "Design an Obstacle Course", description: "Create a challenging course using fallen logs, rocks, and stream crossings.", waterActivity: false },
+                        { title: "Outdoor Theatre", description: "Write and perform plays using nature as your stage and backdrop.", waterActivity: false },
+                        { title: "Campfire Cooking", description: "Safely build a fire and cook meals or roast marshmallows together.", waterActivity: false },
+                        { title: "Stream Study", description: "Spend hours studying the ecosystem in and around your stream.", waterActivity: true },
+                        { title: "Adventure Course", description: "Design a multi-hour adventure with different challenges and activities.", waterActivity: false },
+                        { title: "Wildlife Research", description: "Conduct a detailed study of all the animals living on your property.", waterActivity: false },
+                        { title: "Outdoor Games Tournament", description: "Set up stations for different outdoor games and compete.", waterActivity: false },
+                        { title: "Nature Documentary", description: "Film a professional-style documentary about your outdoor environment.", waterActivity: false },
+                        { title: "Camping Adventure", description: "Set up tents and spend the day camping with outdoor cooking and activities.", waterActivity: false },
+                        { title: "Environmental Project", description: "Work together on a conservation project like cleaning up an area or planting trees.", waterActivity: false },
+                        { title: "Exploration Expedition", description: "Plan and execute a detailed exploration of new areas around your property.", waterActivity: false },
+                        { title: "Biking", description: "Go for a bike ride around the neighbourhood.", waterActivity: false },
+                        { title: "Football", description: "Have a friendly game of football.", waterActivity: false },
+                        { title: "Outdoor Science Lab", description: "Set up experiments to study soil, water, plants, and weather over several hours.", waterActivity: false }
                     ]
                 }
             }
@@ -676,11 +694,12 @@
                         activities[location][company][duration].forEach((activity, index) => {
                             const activityDiv = document.createElement('div');
                             activityDiv.className = 'activity-admin-item';
+                            const waterIcon = activity.waterActivity ? '💧' : '';
                             activityDiv.innerHTML = `
                                 <div class="activity-admin-header">
                                     <div>
-                                        <div class="activity-admin-title">${activity.title}</div>
-                                        <div class="activity-admin-meta">${location} • ${company} • ${duration}</div>
+                                        <div class="activity-admin-title">${activity.title} ${waterIcon}</div>
+                                        <div class="activity-admin-meta">${location} • ${company} • ${duration} ${activity.waterActivity ? '• water activity' : ''}</div>
                                     </div>
                                     <div class="activity-admin-actions">
                                         <button class="edit-btn" onclick="editActivity('${location}', '${company}', '${duration}', ${index})">Edit</button>
@@ -706,6 +725,7 @@
             document.getElementById('activity-duration').value = duration;
             document.getElementById('activity-title').value = activity.title;
             document.getElementById('activity-description').value = activity.description;
+            document.getElementById('activity-water').checked = activity.waterActivity || false;
             
             showAdminTab('add');
         }
@@ -730,8 +750,9 @@
             const duration = document.getElementById('activity-duration').value;
             const title = document.getElementById('activity-title').value;
             const description = document.getElementById('activity-description').value;
+            const waterActivity = document.getElementById('activity-water').checked;
             
-            const newActivity = { title, description };
+            const newActivity = { title, description, waterActivity };
             
             if (editingActivity) {
                 // Update existing activity
@@ -749,7 +770,13 @@
         });
 
         function getRandomActivities(activitiesArray, count = 2) {
-            const shuffled = [...activitiesArray].sort(() => 0.5 - Math.random());
+            // Filter out water activities if water activities are excluded
+            let filteredActivities = activitiesArray;
+            if (selections.excludeWater) {
+                filteredActivities = activitiesArray.filter(activity => !activity.waterActivity);
+            }
+            
+            const shuffled = [...filteredActivities].sort(() => 0.5 - Math.random());
             return shuffled.slice(0, count);
         }
 
@@ -762,7 +789,7 @@
             
             currentStep++;
             
-            if (currentStep <= 3) {
+            if (currentStep <= 4) {
                 document.getElementById(`dot${currentStep}`).classList.add('active');
                 showNextQuestion();
             } else {
@@ -786,7 +813,24 @@
                     <button class="option-btn" onclick="selectOption('quick')">⚡ Quick (under 30 mins)</button>
                     <button class="option-btn" onclick="selectOption('long')">🕐 Long (30+ mins)</button>
                 `;
+            } else if (currentStep === 4) {
+                questionElement.textContent = "Are water activities okay?";
+                optionsElement.innerHTML = `
+                    <button class="option-btn" onclick="selectWaterOption(false)">💧 Yes, water activities are fine</button>
+                    <button class="option-btn" onclick="selectWaterOption(true)">🚫 No water activities please</button>
+                `;
             }
+        }
+
+        function selectWaterOption(excludeWater) {
+            selections.excludeWater = excludeWater;
+            
+            // Update progress
+            document.getElementById(`dot${currentStep}`).classList.remove('active');
+            document.getElementById(`dot${currentStep}`).classList.add('completed');
+            
+            currentStep++;
+            showResults();
         }
 
         function showResults() {
@@ -801,39 +845,55 @@
             document.getElementById('results').style.display = 'block';
             
             const activitiesContainer = document.getElementById('activities');
-            activitiesContainer.innerHTML = '<h2 style="text-align: center; color: #2d3748; margin-bottom: 20px;">Here are 2 great activities for you!</h2>';
+            let headerText = 'Here are 2 great activities for you!';
+            
+            if (selectedActivities.length === 0) {
+                headerText = 'Sorry, no activities match your criteria. Try allowing water activities or going back to change your selections.';
+            } else if (selectedActivities.length === 1) {
+                headerText = 'Here is 1 great activity for you!';
+            }
+            
+            activitiesContainer.innerHTML = `<h2 style="text-align: center; color: #2d3748; margin-bottom: 20px;">${headerText}</h2>`;
             
             selectedActivities.forEach(activity => {
                 const activityDiv = document.createElement('div');
                 activityDiv.className = 'activity-item';
+                const waterIcon = activity.waterActivity ? ' 💧' : '';
                 activityDiv.innerHTML = `
-                    <div class="activity-title">${activity.title}</div>
+                    <div class="activity-title">${activity.title}${waterIcon}</div>
                     <div class="activity-description">${activity.description}</div>
                 `;
                 activitiesContainer.appendChild(activityDiv);
             });
 
-            // Add a "Get Different Activities" button
-            const newActivitiesBtn = document.createElement('button');
-            newActivitiesBtn.className = 'option-btn';
-            newActivitiesBtn.style.marginTop = '20px';
-            newActivitiesBtn.innerHTML = '🔄 Get Different Activities';
-            newActivitiesBtn.onclick = function() {
-                showResults(); // This will show 2 new random activities
-            };
-            activitiesContainer.appendChild(newActivitiesBtn);
+            // Add a "Get Different Activities" button if there are activities
+            if (selectedActivities.length > 0) {
+                const newActivitiesBtn = document.createElement('button');
+                newActivitiesBtn.className = 'option-btn';
+                newActivitiesBtn.style.marginTop = '20px';
+                newActivitiesBtn.innerHTML = '🔄 Get Different Activities';
+                newActivitiesBtn.onclick = function() {
+                    showResults(); // This will show 2 new random activities
+                };
+                activitiesContainer.appendChild(newActivitiesBtn);
+            }
         }
 
         function goBack() {
             if (currentStep > 1) {
                 // Remove current step selection
-                delete selections[`step${currentStep - 1}`];
+                if (currentStep === 5) {
+                    // Going back from results, remove water preference
+                    delete selections.excludeWater;
+                    currentStep = 4;
+                } else {
+                    delete selections[`step${currentStep - 1}`];
+                    currentStep--;
+                }
                 
                 // Update progress
-                document.getElementById(`dot${currentStep - 1}`).classList.remove('completed');
-                document.getElementById(`dot${currentStep - 1}`).classList.add('active');
-                
-                currentStep--;
+                document.getElementById(`dot${currentStep}`).classList.remove('completed');
+                document.getElementById(`dot${currentStep}`).classList.add('active');
                 
                 // Show question container again
                 document.getElementById('question-container').style.display = 'block';
@@ -858,6 +918,12 @@
                         <button class="option-btn" onclick="selectOption('quick')">⚡ Quick (under 30 mins)</button>
                         <button class="option-btn" onclick="selectOption('long')">🕐 Long (30+ mins)</button>
                     `;
+                } else if (currentStep === 4) {
+                    document.getElementById('question').textContent = "Are water activities okay?";
+                    document.getElementById('options').innerHTML = `
+                        <button class="option-btn" onclick="selectWaterOption(false)">💧 Yes, water activities are fine</button>
+                        <button class="option-btn" onclick="selectWaterOption(true)">🚫 No water activities please</button>
+                    `;
                 }
             }
         }
@@ -871,6 +937,7 @@
             document.getElementById('dot1').classList.remove('completed');
             document.getElementById('dot2').classList.remove('active', 'completed');
             document.getElementById('dot3').classList.remove('active', 'completed');
+            document.getElementById('dot4').classList.remove('active', 'completed');
             
             // Show first question
             document.getElementById('question-container').style.display = 'block';
